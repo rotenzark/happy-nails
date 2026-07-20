@@ -11,7 +11,7 @@
    ═══════════════════════════════════════════════════════════════════ */
 
 :root {
-  --rosa: #F2DFE0;
+  --rosa: #F1D8D8;   /* campionato dal loro logo: così l'immagine si salda al fondo */
   --rosa-scuro: #E4C6C8;
   --rosa-velo: #FAF2F2;
   --oro: #C9A227;
@@ -105,8 +105,6 @@ html:not(.js) .reveal { opacity: 1; }
 .hero-logo {
   width: clamp(210px, 26vw, 320px); height: auto;
   margin: 0 0 clamp(1.4rem, 3vw, 2.2rem);
-  /* la jpg ha lo stesso rosa del fondo: multiply salda i due senza bordi */
-  mix-blend-mode: multiply;
 }
 
 .occhiello {
