@@ -1,0 +1,305 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Happy Nails — Via Ponale 6, Milano
+   Concept: «sette giorni su sette». Sono aperti tutti i giorni e la
+   DOMENICA aprono alle 8:30, mezz'ora prima di ogni altro giorno —
+   in un quartiere dove i saloni chiudono nel fine settimana.
+   Gesto-firma: la settimana disegnata come sette barre orarie, ognuna
+   lunga quanto la fascia di apertura reale.
+   Palette dal loro logo: rosa cipria, oro, nero.
+   Nessuna foto del locale esiste (le uniche disponibili erano stock e
+   sono state scartate): il sito è tipografico per necessità e coerenza.
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  --rosa: #F2DFE0;
+  --rosa-scuro: #E4C6C8;
+  --rosa-velo: #FAF2F2;
+  --oro: #C9A227;
+  --oro-scuro: #8A6E12;
+  --nero: #141012;
+  --grigio: #6B6064;
+  --bianco: #fff;
+
+  --display: 'Urbanist', system-ui, sans-serif;
+  --corpo: 'Kumbh Sans', system-ui, -apple-system, sans-serif;
+
+  --max: 1140px;
+  --gutter: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  font-family: var(--corpo);
+  font-size: clamp(1rem, 0.97rem + 0.16vw, 1.07rem);
+  line-height: 1.64;
+  color: var(--nero);
+  background: var(--bianco);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.1; margin: 0; }
+p { margin: 0 0 1rem; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+
+.skip { position: absolute; left: -9999px; top: 0; z-index: 200; background: var(--nero); color: #fff; padding: .8rem 1.2rem; }
+.skip:focus { left: 0; }
+
+.js .reveal { opacity: 0; }
+.js .reveal.in-view { opacity: 1; }
+html:not(.js) .reveal { opacity: 1; }
+
+/* ---------- intro: i due archi del loro logo ---------- */
+#intro {
+  position: fixed; inset: 0; z-index: 120;
+  background: var(--rosa); display: grid; place-items: center;
+  transition: opacity .6s ease;
+}
+#intro.hide { opacity: 0; pointer-events: none; }
+#introArco1, #introArco2 { stroke-dasharray: 130; stroke-dashoffset: 130; animation: arco .9s ease forwards; }
+#introArco2 { animation-delay: .18s; }
+@keyframes arco { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) { #introArco1, #introArco2 { animation: none; stroke-dashoffset: 0; } }
+
+/* ---------- header ---------- */
+.top {
+  position: sticky; top: 0; z-index: 100;
+  display: flex; align-items: center; gap: 1rem;
+  padding: .85rem var(--gutter);
+  background: var(--rosa); color: var(--nero);
+}
+.marchio { display: flex; flex-direction: column; line-height: 1.08; text-decoration: none; margin-right: auto; }
+.marchio-nome {
+  font-family: var(--display); font-size: 1.3rem; font-weight: 500;
+  letter-spacing: .12em; text-transform: uppercase;
+}
+.marchio-sub { font-size: .6rem; letter-spacing: .3em; text-transform: uppercase; color: var(--oro-scuro); }
+
+.top nav { display: flex; align-items: center; gap: 1.4rem; }
+.top nav a {
+  text-decoration: none; font-size: .85rem; font-weight: 400;
+  padding: .3rem 0; border-bottom: 1px solid transparent;
+}
+.top nav a:hover, .top nav a:focus-visible { border-bottom-color: var(--oro); }
+
+#langToggle {
+  background: none; border: 1px solid rgba(20,16,18,.3); color: inherit;
+  font: inherit; font-size: .7rem; font-weight: 700; letter-spacing: .1em;
+  padding: .36rem .56rem; cursor: pointer; border-radius: 2px;
+}
+#langToggle:hover { border-color: var(--oro-scuro); color: var(--oro-scuro); }
+
+#burger { display: none; background: none; border: 0; cursor: pointer; padding: .4rem; }
+#burger span { display: block; width: 24px; height: 2px; background: var(--nero); margin: 5px 0; }
+
+/* ---------- hero ---------- */
+#hero {
+  background: var(--rosa);
+  padding: clamp(3rem, 9vw, 7rem) var(--gutter) clamp(3.5rem, 10vw, 8rem);
+}
+.hero-in { max-width: var(--max); margin: 0 auto; }
+.hero-logo {
+  width: clamp(210px, 26vw, 320px); height: auto;
+  margin: 0 0 clamp(1.4rem, 3vw, 2.2rem);
+  /* la jpg ha lo stesso rosa del fondo: multiply salda i due senza bordi */
+  mix-blend-mode: multiply;
+}
+
+.occhiello {
+  font-size: .72rem; font-weight: 700; letter-spacing: .24em;
+  text-transform: uppercase; color: var(--oro-scuro); margin-bottom: 1.5rem;
+}
+#heroTitolo {
+  font-size: clamp(2.5rem, 7vw, 5.2rem); font-weight: 300;
+  letter-spacing: -.015em; margin-bottom: 1.4rem;
+}
+#heroTitolo .riga { display: block; }
+#heroTitolo .oro { color: var(--oro-scuro); font-weight: 500; }
+.hero-p { max-width: 50ch; color: #5A4E52; font-size: 1.06rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.7rem; }
+
+.btn {
+  display: inline-block; text-decoration: none;
+  font-family: var(--display); font-weight: 700; font-size: .86rem;
+  letter-spacing: .1em; text-transform: uppercase; padding: .95rem 1.8rem;
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}
+.btn-pieno { background: var(--nero); color: var(--bianco); }
+.btn-pieno:hover, .btn-pieno:focus-visible { background: var(--oro-scuro); }
+.btn-vuoto { border: 1px solid rgba(20,16,18,.35); color: var(--nero); }
+.btn-vuoto:hover, .btn-vuoto:focus-visible { border-color: var(--oro); color: var(--oro-scuro); }
+
+/* ══════ LA SETTIMANA — sezione-firma ══════ */
+#settimana {
+  background: var(--bianco);
+  padding: clamp(3.5rem, 8vw, 6rem) var(--gutter);
+}
+.sett-intro { max-width: var(--max); margin: 0 auto clamp(2rem, 4vw, 3rem); }
+.sett-intro h2 { font-size: clamp(1.9rem, 4.4vw, 3rem); margin-bottom: .8rem; }
+.sett-intro p { color: var(--grigio); max-width: 56ch; margin: 0; }
+
+.grafico { max-width: var(--max); margin: 0 auto; }
+.scala {
+  display: grid; grid-template-columns: repeat(8, 1fr);
+  margin-left: clamp(4.6rem, 12vw, 7rem); margin-right: clamp(4.4rem, 11vw, 6.5rem);
+  font-size: .7rem; color: #A79BA0; letter-spacing: .06em;
+  padding-bottom: .4rem; border-bottom: 1px solid var(--rosa-scuro);
+}
+.giorni { list-style: none; margin: 0; padding: 0; }
+.giorno {
+  display: grid;
+  grid-template-columns: clamp(4.6rem, 12vw, 7rem) 1fr clamp(4.4rem, 11vw, 6.5rem);
+  gap: .6rem; align-items: center; padding: .5rem 0;
+}
+.g-nome { font-size: .87rem; color: var(--grigio); }
+.g-pista { position: relative; height: 16px; background: var(--rosa-velo); }
+.g-barra {
+  position: absolute; top: 0; bottom: 0; left: 0; width: 0;
+  background: var(--rosa-scuro);
+}
+.g-lunga { background: var(--rosa-scuro); }
+.g-presto { background: var(--oro); }
+.g-ore {
+  font-size: .78rem; color: var(--grigio); text-align: right;
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.giorno-dom .g-nome { color: var(--oro-scuro); font-weight: 700; }
+.giorno-dom .g-ore { color: var(--oro-scuro); font-weight: 700; }
+.giorno.is-today .g-nome { color: var(--nero); font-weight: 700; }
+/* senza JS le barre non vengono posizionate: gli orari sono comunque
+   scritti in chiaro a destra di ogni riga */
+html:not(.js) .g-barra { left: 0; width: 100%; opacity: .55; }
+
+.stato {
+  max-width: var(--max); margin: 1.8rem auto 0;
+  display: inline-block; font-family: var(--display); font-weight: 700;
+  font-size: .8rem; letter-spacing: .1em; text-transform: uppercase;
+  background: var(--nero); color: var(--bianco); padding: .45rem .9rem;
+}
+
+/* ---------- servizi ---------- */
+#servizi { background: var(--rosa-velo); padding: clamp(3.5rem, 8vw, 6rem) var(--gutter); }
+.serv-testa { max-width: var(--max); margin: 0 auto clamp(2rem, 4vw, 2.8rem); }
+.serv-testa h2 { font-size: clamp(1.8rem, 4vw, 2.7rem); margin-bottom: .8rem; }
+.serv-testa p { color: var(--grigio); max-width: 56ch; margin: 0; }
+.serv-griglia {
+  max-width: var(--max); margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.6rem, 4vw, 3.5rem);
+}
+.serv-col h3 {
+  font-size: 1.5rem; font-weight: 500; letter-spacing: .06em;
+  padding-bottom: .7rem; border-bottom: 2px solid var(--oro); margin-bottom: 1.1rem;
+}
+.conte { list-style: none; margin: 0 0 1.4rem; padding: 0; display: flex; flex-wrap: wrap; gap: .9rem 1.6rem; }
+.conte li { display: flex; align-items: baseline; gap: .4rem; }
+.c-n { font-family: var(--display); font-size: 1.6rem; font-weight: 700; color: var(--oro-scuro); }
+.c-l { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--grigio); }
+.prezzi { list-style: none; margin: 0; padding: 0; }
+.prezzi li {
+  display: flex; justify-content: space-between; gap: 1rem;
+  padding: .62rem 0; border-bottom: 1px dotted var(--rosa-scuro); font-size: .95rem;
+}
+.p-val { font-family: var(--display); font-weight: 700; color: var(--nero); white-space: nowrap; }
+.serv-coda { max-width: var(--max); margin: 2rem auto 0; font-size: .92rem; color: var(--grigio); }
+
+/* ---------- team ---------- */
+#team { max-width: var(--max); margin: 0 auto; padding: clamp(3.5rem, 8vw, 6rem) var(--gutter); }
+#team h2 { font-size: clamp(1.8rem, 4vw, 2.7rem); margin-bottom: .5rem; }
+.team-sub { color: var(--grigio); margin-bottom: 2rem; }
+.persone {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: .9rem;
+}
+.persone li {
+  padding: 1.2rem 1.1rem; background: var(--rosa-velo);
+  display: flex; flex-direction: column; gap: .25rem;
+}
+.pe-nome { font-family: var(--display); font-size: 1.35rem; font-weight: 500; }
+.pe-rate { font-size: .8rem; color: var(--oro-scuro); font-weight: 700; }
+.pe-rate span { color: var(--grigio); font-weight: 400; }
+
+/* ---------- recensioni ---------- */
+#voci { background: var(--rosa); padding: clamp(3.5rem, 8vw, 6rem) var(--gutter); }
+#voci h2 { font-size: clamp(1.8rem, 4vw, 2.7rem); margin: 0 auto .5rem; max-width: var(--max); }
+.voci-sub { color: #5A4E52; margin: 0 auto 2.2rem; max-width: var(--max); }
+.voci-sub strong { font-family: var(--display); font-size: 1.4rem; color: var(--oro-scuro); }
+.voci-griglia {
+  max-width: var(--max); margin: 0 auto;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(262px, 1fr)); gap: 1.1rem;
+}
+.voci-griglia blockquote { margin: 0; padding: 1.5rem 1.4rem; background: var(--bianco); }
+.voci-griglia p { font-size: .96rem; margin-bottom: .8rem; }
+.voci-griglia cite {
+  font-style: normal; font-family: var(--display); font-size: .72rem; font-weight: 700;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--oro-scuro);
+}
+
+/* ---------- dove ---------- */
+#dove { display: grid; grid-template-columns: .9fr 1.1fr; }
+.dove-info { padding: clamp(3rem, 7vw, 5rem) var(--gutter); }
+.dove-info h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 1.1rem; }
+.indirizzo { font-family: var(--display); font-size: 1.35rem; line-height: 1.4; }
+.mezzi { color: var(--grigio); font-size: .94rem; }
+.dove-cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.4rem; }
+.dove-mappa iframe { width: 100%; height: 100%; min-height: 380px; display: block; }
+
+/* ---------- footer ---------- */
+footer {
+  background: var(--nero); color: rgba(255,255,255,.7);
+  padding: clamp(2.4rem, 5vw, 3.4rem) var(--gutter);
+  text-align: center; font-size: .9rem;
+}
+footer p { margin: 0 0 .5rem; }
+.foot-marchio {
+  font-family: var(--display); font-size: 1.35rem; font-weight: 500;
+  letter-spacing: .12em; text-transform: uppercase; color: #fff; margin-bottom: .6rem;
+}
+.foot-sub { display: block; font-size: .6rem; letter-spacing: .3em; color: var(--oro); margin-top: .25rem; }
+footer a { color: var(--oro); }
+.foot-nota { font-size: .78rem; color: rgba(255,255,255,.42); margin-top: 1.2rem; }
+
+/* ---------- action bar ---------- */
+#actionBar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 90;
+  display: none; transform: translateY(100%); transition: transform .3s ease;
+}
+#actionBar.is-visible { transform: translateY(0); }
+#actionBar a {
+  flex: 1; text-align: center; text-decoration: none;
+  font-family: var(--display); padding: .95rem .5rem; font-size: .82rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+}
+#actionBar a:first-child { background: var(--nero); color: #fff; }
+#actionBar a:last-child { background: var(--oro); color: var(--nero); }
+
+/* ---------- responsive ---------- */
+@media (max-width: 980px) {
+  #dove { grid-template-columns: 1fr; }
+  .serv-griglia { grid-template-columns: 1fr; }
+  .dove-mappa iframe { min-height: 300px; }
+}
+
+@media (max-width: 760px) {
+  .top nav {
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; align-items: flex-start; gap: 0;
+    background: var(--rosa-scuro); padding: 0 var(--gutter);
+    max-height: 0; overflow: hidden;
+    transition: max-height .3s ease, padding .3s ease;
+  }
+  .top nav.nav-open { max-height: 340px; padding: 1rem var(--gutter) 1.4rem; }
+  .top nav a { width: 100%; padding: .7rem 0; }
+  #burger { display: block; }
+  #actionBar { display: flex; }
+
+  /* il grafico si stringe: nome sopra, barra e ore sotto */
+  .scala { display: none; }
+  .giorno { grid-template-columns: 1fr auto; row-gap: .3rem; padding: .7rem 0; }
+  .g-nome { grid-column: 1; grid-row: 1; font-weight: 500; color: var(--nero); }
+  .g-ore { grid-column: 2; grid-row: 1; }
+  .g-pista { grid-column: 1 / span 2; grid-row: 2; }
+}

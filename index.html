@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Nails — Centro estetico aperto sette giorni su sette, Via Ponale 6, Milano</title>
+<meta name="description" content="Centro estetico e unghie in Via Ponale 6 a Milano, zona Bicocca-Niguarda. Aperti tutti i giorni: la domenica dalle 8:30. Manicure, pedicure, laser, cera brasiliana, extension ciglia.">
+<link rel="canonical" href="https://rotenzark.github.io/happy-nails/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Happy Nails — Milano, Via Ponale 6">
+<meta property="og:description" content="Aperti sette giorni su sette. La domenica dalle 8:30, prima di ogni altro giorno.">
+<meta property="og:image" content="https://rotenzark.github.io/happy-nails/img/og-image.jpg">
+<meta property="og:url" content="https://rotenzark.github.io/happy-nails/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta name="theme-color" content="#F2DFE0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700&family=Kumbh+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=1">
+</head>
+<body>
+
+<div id="intro" aria-hidden="true">
+  <svg viewBox="0 0 120 120" width="120" height="120" aria-hidden="true">
+    <path id="introArco1" d="M32 14A52 52 0 0 1 106 60" fill="none" stroke="#C9A227" stroke-width="4" stroke-linecap="round"/>
+    <path id="introArco2" d="M88 106A52 52 0 0 1 14 60" fill="none" stroke="#C9A227" stroke-width="4" stroke-linecap="round"/>
+  </svg>
+</div>
+
+<a class="skip" href="#main">Salta al contenuto</a>
+
+<header class="top">
+  <a class="marchio" href="#hero">
+    <span class="marchio-nome">Happy Nails</span>
+    <span class="marchio-sub">Centro estetico</span>
+  </a>
+  <nav id="mainNav" aria-label="Principale">
+    <a href="#settimana" data-i18n="nav.sett">Quando siamo aperti</a>
+    <a href="#servizi" data-i18n="nav.serv">Cosa facciamo</a>
+    <a href="#team" data-i18n="nav.team">Chi ci lavora</a>
+    <a href="#voci" data-i18n="nav.voci">Recensioni</a>
+    <a href="#dove" data-i18n="nav.dove">Dove</a>
+  </nav>
+  <button id="langToggle" type="button" aria-label="Switch language / Cambia lingua">IT / EN</button>
+  <button id="burger" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Apri il menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="main">
+
+<!-- ══════ HERO ══════ -->
+<section id="hero">
+  <div class="hero-in">
+    <img class="hero-logo" src="img/logo.jpg" width="720" height="480" alt="Il logo di Happy Nails Centro Estetico" data-i18n-alt="alt.logo">
+    <p class="occhiello" data-i18n="hero.occhiello">Via Ponale 6 · Milano, M5 Ponale</p>
+    <h1 id="heroTitolo">
+      <span class="riga" data-i18n="hero.t1">Sette giorni</span>
+      <span class="riga" data-i18n="hero.t2">su sette.</span>
+      <span class="riga oro" data-i18n="hero.t3">La domenica dalle 8:30.</span>
+    </h1>
+    <p class="hero-p" data-i18n="hero.p">Mezz'ora prima di ogni altro giorno della settimana. Perché la domenica è quando la gente ha tempo — e quasi tutti, qui intorno, sono chiusi.</p>
+    <div class="hero-cta">
+      <a class="btn btn-pieno" href="#settimana" data-i18n="hero.cta1">Guarda la settimana</a>
+      <a class="btn btn-vuoto" href="tel:+393280408215" data-i18n="hero.cta2">328 040 8215</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ LA SETTIMANA — sezione-firma ══════ -->
+<section id="settimana">
+  <div class="sett-intro">
+    <h2 data-i18n="sett.h">La settimana, per intero</h2>
+    <p data-i18n="sett.p">Ogni barra è la fascia in cui siamo aperti. La domenica comincia più a sinistra di tutte, il martedì finisce più a destra.</p>
+  </div>
+
+  <!-- il grafico: elemento-FIRMA, deliberatamente NON .reveal -->
+  <div class="grafico" id="grafico">
+    <div class="scala" aria-hidden="true">
+      <span>8</span><span>10</span><span>12</span><span>14</span><span>16</span><span>18</span><span>20</span><span>22</span>
+    </div>
+    <ul class="giorni">
+      <li class="giorno" data-day="1">
+        <span class="g-nome" data-i18n="g.lun">lunedì</span>
+        <span class="g-pista"><span class="g-barra" data-da="9" data-a="20.5"></span></span>
+        <span class="g-ore">09:00–20:30</span>
+      </li>
+      <li class="giorno" data-day="2">
+        <span class="g-nome" data-i18n="g.mar">martedì</span>
+        <span class="g-pista"><span class="g-barra g-lunga" data-da="9" data-a="21.5"></span></span>
+        <span class="g-ore">09:00–21:30</span>
+      </li>
+      <li class="giorno" data-day="3">
+        <span class="g-nome" data-i18n="g.mer">mercoledì</span>
+        <span class="g-pista"><span class="g-barra" data-da="9" data-a="20.5"></span></span>
+        <span class="g-ore">09:00–20:30</span>
+      </li>
+      <li class="giorno" data-day="4">
+        <span class="g-nome" data-i18n="g.gio">giovedì</span>
+        <span class="g-pista"><span class="g-barra" data-da="9" data-a="20.5"></span></span>
+        <span class="g-ore">09:00–20:30</span>
+      </li>
+      <li class="giorno" data-day="5">
+        <span class="g-nome" data-i18n="g.ven">venerdì</span>
+        <span class="g-pista"><span class="g-barra" data-da="9" data-a="20.5"></span></span>
+        <span class="g-ore">09:00–20:30</span>
+      </li>
+      <li class="giorno" data-day="6">
+        <span class="g-nome" data-i18n="g.sab">sabato</span>
+        <span class="g-pista"><span class="g-barra" data-da="9" data-a="20.5"></span></span>
+        <span class="g-ore">09:00–20:30</span>
+      </li>
+      <li class="giorno giorno-dom" data-day="0">
+        <span class="g-nome" data-i18n="g.dom">domenica</span>
+        <span class="g-pista"><span class="g-barra g-presto" data-da="8.5" data-a="19.5"></span></span>
+        <span class="g-ore">08:30–19:30</span>
+      </li>
+    </ul>
+  </div>
+  <p id="orarioStato" class="stato">&nbsp;</p>
+</section>
+
+<!-- ══════ SERVIZI ══════ -->
+<section id="servizi">
+  <div class="serv-testa reveal">
+    <h2 data-i18n="serv.h">Due mestieri sotto la stessa insegna</h2>
+    <p data-i18n="serv.p">Da una parte le unghie, dall'altra l'estetica avanzata: laser, cera brasiliana, extension ciglia. Dieci famiglie di trattamenti in tutto.</p>
+  </div>
+  <div class="serv-griglia">
+    <div class="serv-col reveal">
+      <h3 data-i18n="serv.u">Unghie</h3>
+      <ul class="conte">
+        <li><span class="c-n">9</span><span class="c-l" data-i18n="c.ped">pedicure</span></li>
+        <li><span class="c-n">7</span><span class="c-l" data-i18n="c.man">manicure</span></li>
+        <li><span class="c-n">7</span><span class="c-l" data-i18n="c.ric">ricostruzione e copertura</span></li>
+      </ul>
+      <ul class="prezzi">
+        <li><span class="p-nome" data-i18n="p.a">Smalto semipermanente piedi</span><span class="p-val" data-i18n="p.da1">da 25 €</span></li>
+        <li><span class="p-nome" data-i18n="p.b">Pedicure spa curativo</span><span class="p-val" data-i18n="p.da2">da 25 €</span></li>
+        <li><span class="p-nome" data-i18n="p.c">Pedicure semipermanente</span><span class="p-val" data-i18n="p.da3">da 36 €</span></li>
+        <li><span class="p-nome" data-i18n="p.d">Manicure e pedicure semipermanente</span><span class="p-val" data-i18n="p.da4">da 63 €</span></li>
+      </ul>
+    </div>
+    <div class="serv-col reveal">
+      <h3 data-i18n="serv.e">Estetica</h3>
+      <ul class="conte">
+        <li><span class="c-n">5</span><span class="c-l" data-i18n="c.cig">extension ciglia</span></li>
+        <li><span class="c-n">4</span><span class="c-l" data-i18n="c.mas">massaggi</span></li>
+        <li><span class="c-n">4</span><span class="c-l" data-i18n="c.tru">trucco</span></li>
+        <li><span class="c-n">4</span><span class="c-l" data-i18n="c.uomo">trattamenti uomo</span></li>
+      </ul>
+      <ul class="prezzi">
+        <li><span class="p-nome" data-i18n="p.e">Epilazione laser viso e corpo</span><span class="p-val" data-i18n="p.da5">da 1 €</span></li>
+        <li><span class="p-nome" data-i18n="p.f">Epilazione a cera viso e corpo</span><span class="p-val" data-i18n="p.da6">da 3 €</span></li>
+        <li><span class="p-nome" data-i18n="p.g">Cera brasiliana</span><span class="p-val" data-i18n="p.su">su richiesta</span></li>
+        <li><span class="p-nome" data-i18n="p.h">Pulizia del viso</span><span class="p-val" data-i18n="p.su2">su richiesta</span></li>
+      </ul>
+    </div>
+  </div>
+  <p class="serv-coda reveal" data-i18n="serv.coda">Si lavora con <strong>ProNails</strong>. Si paga in contanti, con carta di credito o bancomat. Si parla italiano e inglese.</p>
+</section>
+
+<!-- ══════ TEAM ══════ -->
+<section id="team">
+  <h2 class="reveal" data-i18n="team.h">Chi ci lavora</h2>
+  <p class="team-sub reveal" data-i18n="team.sub">Sei persone, e nelle recensioni i clienti le chiamano per nome.</p>
+  <ul class="persone">
+    <li class="reveal"><span class="pe-nome">Francesca</span><span class="pe-rate">4,8 <span data-i18n="pe.su1">su 75 recensioni</span></span></li>
+    <li class="reveal"><span class="pe-nome">Sharon</span><span class="pe-rate">4,6 <span data-i18n="pe.su2">su 73 recensioni</span></span></li>
+    <li class="reveal"><span class="pe-nome">Iri</span><span class="pe-rate">4,6 <span data-i18n="pe.su3">su 73 recensioni</span></span></li>
+    <li class="reveal"><span class="pe-nome">Maria</span><span class="pe-rate">4,3 <span data-i18n="pe.su4">su 67 recensioni</span></span></li>
+    <li class="reveal"><span class="pe-nome">Anita</span><span class="pe-rate">4,5 <span data-i18n="pe.su5">su 33 recensioni</span></span></li>
+    <li class="reveal"><span class="pe-nome">Chiara</span><span class="pe-rate">4,3 <span data-i18n="pe.su6">su 12 recensioni</span></span></li>
+  </ul>
+</section>
+
+<!-- ══════ RECENSIONI ══════ -->
+<section id="voci">
+  <h2 class="reveal" data-i18n="voci.h">Cosa scrivono</h2>
+  <p class="voci-sub reveal"><strong>4,5</strong> <span data-i18n="voci.sub">su oltre 400 recensioni verificate, e ne arrivano di nuove ogni settimana.</span></p>
+  <div class="voci-griglia">
+    <blockquote class="reveal">
+      <p>«Ha steso il colore in modo impeccabile: uniforme, preciso e super curato. Ma la cosa che mi ha colpita di più è stata la capacità di applicarlo valorizzando anche la forma dell'unghia.»</p>
+      <cite>Maria</cite>
+    </blockquote>
+    <blockquote class="reveal">
+      <p>«Per la prima volta ho trovato un ragazzo: attento, educato e molto scrupoloso. Un ottimo servizio.»</p>
+      <cite>Simonetta</cite>
+    </blockquote>
+    <blockquote class="reveal">
+      <p>«Pulizia viso presso questo salone sempre una bella esperienza. Fatta bene, in maniera attenta e accurata.»</p>
+      <cite>Rosa</cite>
+    </blockquote>
+    <blockquote class="reveal">
+      <p>«Puntuali e veloci. Hanno molti colori disponibili.»</p>
+      <cite>Maddalena</cite>
+    </blockquote>
+    <blockquote class="reveal">
+      <p>«Tutto benissimo!»</p>
+      <cite>Federica</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ══════ DOVE ══════ -->
+<section id="dove">
+  <div class="dove-info">
+    <h2 class="reveal" data-i18n="dove.h">Dove siamo</h2>
+    <p class="indirizzo reveal">Via Ponale 6<br>20162 Milano</p>
+    <p class="mezzi reveal" data-i18n="dove.mezzi">Metro <strong>M5 Ponale</strong>, più diverse fermate dell'autobus vicino al centro.</p>
+    <div class="dove-cta reveal">
+      <a class="btn btn-pieno" href="tel:+393280408215">328 040 8215</a>
+      <a class="btn btn-vuoto" href="https://www.google.com/maps/search/?api=1&amp;query=Via+Ponale+6+Milano" target="_blank" rel="noopener" data-i18n="dove.mappa">Apri in Maps</a>
+    </div>
+  </div>
+  <div class="dove-mappa reveal">
+    <iframe
+      title="Mappa: Via Ponale 6, Milano"
+      src="https://www.google.com/maps?q=Via%20Ponale%206%2C%2020162%20Milano&output=embed"
+      width="600" height="450" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p class="foot-marchio">Happy Nails <span class="foot-sub">Centro estetico</span></p>
+  <p>Via Ponale 6, 20162 Milano · <a href="tel:+393280408215">328 040 8215</a></p>
+  <p class="foot-nota" data-i18n="foot.nota">Sito dimostrativo realizzato da Bespoke Studio.</p>
+</footer>
+
+<div id="actionBar">
+  <a href="tel:+393280408215" data-i18n="bar.tel">Chiama</a>
+  <a href="#settimana" data-i18n="bar.ore">Orari</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Happy Nails Centro Estetico",
+  "image": "https://rotenzark.github.io/happy-nails/img/og-image.jpg",
+  "url": "https://rotenzark.github.io/happy-nails/",
+  "telephone": "+39 328 040 8215",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Ponale 6",
+    "addressLocality": "Milano",
+    "postalCode": "20162",
+    "addressCountry": "IT"
+  },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "410" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "20:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "09:00", "closes": "21:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "08:30", "closes": "19:30" }
+  ],
+  "priceRange": "€€"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Siete aperti la domenica?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sì, la domenica dalle 8:30 alle 19:30: apriamo mezz'ora prima di ogni altro giorno della settimana. Siamo aperti tutti i giorni." }
+    },
+    {
+      "@type": "Question",
+      "name": "Che orari fate durante la settimana?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Dal lunedì al sabato 09:00–20:30, con il martedì fino alle 21:30. La domenica 08:30–19:30." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto costano manicure e pedicure?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Lo smalto semipermanente ai piedi parte da 25 €, il pedicure spa curativo da 25 €, il pedicure semipermanente da 36 €, manicure e pedicure semipermanente insieme da 63 €." }
+    },
+    {
+      "@type": "Question",
+      "name": "Fate anche trattamenti oltre alle unghie?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sì: epilazione laser viso e corpo, cera classica e brasiliana, extension ciglia, trucco, massaggi, pulizia del viso e una linea di trattamenti dedicata agli uomini." }
+    }
+  ]
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="js/main.js?v=1"></script>
+</body>
+</html>
